@@ -1,0 +1,220 @@
+@charset "uft-8";
+
+/* common */
+body{
+  padding: 10px 0;
+}
+
+#wrap{
+  background: url(../img/bg.png) no-repeat center center / cover;
+  height: calc(100vh + 1px);
+  overflow: hidden;
+  position: relative;
+}
+
+h1.mainleft{
+  font-family: "moondance";
+  font-size: 16rem;
+  font-weight: 100; 
+  line-height: 1.25;
+  position: fixed;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  cursor: pointer;
+}
+
+h2.mainright{
+  font-size: 4.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: fixed;
+  left: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h2.mainright span{
+  display: block;
+  font-weight: 200;
+  font-size: 2.4rem;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+.mainmid{
+  display: flex;
+  gap: 180px;
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mainmid li{
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.eclipse{
+  width: 750px;
+  height: 750px;
+  position: relative;
+  top: calc(100% - 820px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.eclipse .sun{
+  width: 687px;
+  height: 687px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  box-shadow: 15px 5px 25px 10px rgba(0,0,0,0.5);
+  z-index: 99;
+}
+.eclipse .sun img{
+  width: 100%;
+}
+.eclipse .moon{
+  width: 100%;
+}
+.eclipse .moon img{
+  width: 100%;
+}
+
+@keyframes scroll {
+  0%{
+    top: 4px;
+  }
+  100%{
+    top: 26px;
+  }
+}
+
+.scroll{
+  position: fixed;
+  left: 90px;
+  bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.scroll .scrollbox{
+  width: 24px;
+  height: 50px;
+  border-radius: 12px;
+  border: 2px solid #6E6857;
+  position: relative;
+}
+.scroll .scrollbox::before{
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #6E6857;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 4px;
+  animation: scroll 1.5s ease 0s infinite normal backwards;
+}
+.scroll p{
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+
+.orbit img{
+  position: fixed;
+}
+.orbit img:nth-child(1){
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  opacity: 80%;
+
+}
+.orbit img:nth-child(2){
+  bottom: 0;
+  left: 0;
+  opacity: 30%;
+  z-index: 9999;
+  height: calc(100% - 230px);
+}
+.orbit img:nth-child(3){
+  top: 0;
+  right: 0;
+  opacity: 30%;
+}
+
+
+/* cover */
+.cover .line{
+  height: 1px;
+  width: calc(100% - 168px);
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cover .line img{
+  width: 100%;
+}
+
+.cover p{
+  font-size: 1.6rem;
+  position: fixed;
+  bottom: 70px;
+  right: 90px;
+}
+.cover p span{
+  font-family: "moondance";
+  font-weight: 100;
+  font-size: 2.8rem;
+}
+
+/* index */
+.index .index-list{
+  position: fixed;
+  top: 50%;
+  left: 160px;
+  transform: translateY(-50%);
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+}
+
+
+.index .index-list li{
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 800;
+  background: linear-gradient(to right, rgba(93,93,93,0) 0%,rgba(93,93,93,1) 100%);
+  background-clip: text;
+  color: transparent;
+  opacity: 0.6;
+}
+.index .index-list li.active{
+  margin-left: 40px;
+  font-size: 6.4rem;
+  color: #6E6857;
+  opacity: 1;
+}
+.index .index-list li.profile{
+  order: 2;
+}
+.index .index-list li.works{
+  order: 3;
+}
+.index .index-list li.additional{
+  order: 1;
+}
