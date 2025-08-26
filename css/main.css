@@ -311,23 +311,23 @@ h2.mainright span{
 
 
 svg {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
 circle {
   fill: none;
   stroke: lightgray;
-  stroke-width: 15;
+  stroke-width: 5;
 }
 .progress {
   fill: none;
-  stroke: #3498db;
-  stroke-width: 15;
+  stroke: #6E6857;
+  stroke-width: 5;
   stroke-linecap: round;
-  stroke-dasharray: 339.292; /* 원 둘레: 2 * π * 54 */
-  stroke-dashoffset: 339.292;
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
   transition: stroke-dashoffset 2s ease;
 }
 .progress.active {
-  stroke-dashoffset: 0;
+  stroke-dashoffset: 16;
 }
