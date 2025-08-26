@@ -75,14 +75,33 @@ h2.mainright span{
   left: 20px;
   border-radius: 50%;
   box-shadow: 15px 5px 25px 10px rgba(0,0,0,0.5);
-  z-index: 99;
+  z-index: 999;
 }
-.eclipse .sun img{
+.eclipse .sun2{
+  position: absolute;
+  top: -31px;
+  left:-21px;
+  border-radius: 50%;
+  z-index: 99;
+  display: none;
+}
+.eclipse .sun img,
+.eclipse .sun2 img{
   width: 100%;
 }
+
+
 .eclipse .moon{
   width: 100%;
 }
+.eclipse .moon img:last-child{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .eclipse .moon img{
   width: 100%;
 }
@@ -146,8 +165,8 @@ h2.mainright span{
   bottom: 0;
   left: 0;
   opacity: 30%;
-  z-index: 9999;
-  height: calc(100% - 230px);
+  /* z-index: 99; */
+  height: calc(100% - 200px);
 }
 .orbit img:nth-child(3){
   top: 0;
@@ -205,9 +224,10 @@ h2.mainright span{
 }
 .index .index-list li.active{
   margin-left: 40px;
-  font-size: 6.4rem;
+  font-size: 5.6rem;
   color: #6E6857;
   opacity: 1;
+  cursor: pointer;
 }
 .index .index-list li.profile{
   order: 2;
@@ -217,4 +237,97 @@ h2.mainright span{
 }
 .index .index-list li.additional{
   order: 1;
+}
+
+
+/* profile */
+#profile .state{
+  position: fixed;
+  width: 250px;
+  text-align: center;
+  top: 480px;
+  left: 295px;
+}
+#profile .state h3{
+  font-size: 2.4rem;
+}
+#profile .state > p{
+  font-size: 1.4rem;
+  opacity: 0.5;
+  margin-bottom: 52px;
+}
+#profile .state ul{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#profile .state ul li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#profile .state ul li .tit{
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+#profile .state ul li .detail{
+  font-size: 1.6rem;
+}
+
+#profile .career{
+  position: fixed;
+  top: 242px;
+  left: 665px;
+  width: 960px;
+  height: 546px;
+  display: flex;
+  justify-content: space-between;
+  border-left: 1px solid rgba(110,104,87,0.3);
+  padding-left: 120px;
+}
+#profile .career > div{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#profile .career h4{
+  font-size: 3.6rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+#profile .career dl dt{
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+#profile .career dl dd{
+  font-size: 1.6rem;
+  font-weight: 300;
+  opacity: 0.5;
+}
+
+
+
+svg {
+  width: 200px;
+  height: 200px;
+}
+circle {
+  fill: none;
+  stroke: lightgray;
+  stroke-width: 15;
+}
+.progress {
+  fill: none;
+  stroke: #3498db;
+  stroke-width: 15;
+  stroke-linecap: round;
+  stroke-dasharray: 339.292; /* 원 둘레: 2 * π * 54 */
+  stroke-dashoffset: 339.292;
+  transition: stroke-dashoffset 2s ease;
+}
+.progress.active {
+  stroke-dashoffset: 0;
 }
