@@ -311,23 +311,26 @@ h2.mainright span{
 
 
 svg {
-  width: 100px;
-  height: 100px;
+  width: 340px;
+  height: 160px;
 }
 circle {
   fill: none;
   stroke: lightgray;
   stroke-width: 5;
 }
-.progress {
+progress {
   fill: none;
-  stroke: #6E6857;
+  stroke: #3498db;
   stroke-width: 5;
   stroke-linecap: round;
-  stroke-dasharray: 160;
-  stroke-dashoffset: 160;
+  stroke-dasharray: 169.65;
+  stroke-dashoffset: 169.65;
   transition: stroke-dashoffset 2s ease;
 }
-.progress.active {
-  stroke-dashoffset: 16;
-}
+
+/* 각 원별 진행률 다르게 지정 가능 */
+.progress1.active { stroke-dashoffset: 16.965; } /* 90% */
+.progress2.active { stroke-dashoffset: 50; }     /* 임의값 예 */
+.progress3.active { stroke-dashoffset: 100; }
+/* ... */
