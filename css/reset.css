@@ -9,7 +9,7 @@ html{
   box-sizing: border-box;
 }
 body{
-  font-family: "notosanskr", "notosans", "moondance";
+  font-family: "notosans", sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
   font-size: 1.4rem; line-height: 1.4; color: #6E6857;

@@ -21,7 +21,7 @@ h1.mainleft{
   bottom: 280px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 999;
+  z-index: 99999;
   cursor: pointer;
 }
 
@@ -49,20 +49,27 @@ h2.mainright span{
   top: 32px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 9999999;
 }
 .mainmid li{
   font-size: 1.6rem;
   font-weight: 500;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
+
+.eclipse-wrapper{
+  position: fixed;
+  bottom: 70px;
+  width: 100%;
+  padding: 0 calc((100% - 750px) / 2);
+}
 
 .eclipse{
   width: 750px;
   height: 750px;
   position: relative;
-  top: calc(100% - 820px);
-  margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -173,6 +180,25 @@ h2.mainright span{
   right: 0;
   opacity: 30%;
 }
+
+.back{
+  position: fixed;
+  right: 160px;
+  bottom: 70px;
+  width: 84px;
+  height: 30px;
+  font-size: 2.4rem;
+  font-weight: 500;
+  background: url(../img/back.png) no-repeat right bottom / contain;
+  text-align: right;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.back:hover{
+  font-weight: 800;
+}
+
 
 
 /* cover */
@@ -326,18 +352,20 @@ h2.mainright span{
   align-items: center;
   width: 60px;
   height: 60px;
+  font-family: 'agencyfb';
+  font-size: 2rem;
 }
 #profile .skills .graph .skill-list li:nth-child(5){
-  color: #f00;
+  color: #187CCC;
 }
 #profile .skills .graph .skill-list li:nth-child(6){
-  color: #f00;
+  color: #EB8E00;
 }
 #profile .skills .graph .skill-list li:nth-child(7){
-  color: #f00;
+  color: #F24E1E;
 }
 #profile .skills .graph .skill-list li:nth-child(8){
-  color: #f00;
+  color: #333333;
 }
 
 #profile .skills svg {
@@ -364,5 +392,133 @@ h2.mainright span{
 #profile .skills .progress4.active { stroke-dashoffset: 80; }
 #profile .skills .progress5.active { stroke-dashoffset: 40; }
 #profile .skills .progress6.active { stroke-dashoffset: 40; }
-#profile .skills .progress7.active { stroke-dashoffset: 20; }
+#profile .skills .progress7.active { stroke-dashoffset: 40; }
 #profile .skills .progress8.active { stroke-dashoffset: 80; }
+
+
+/* #works */
+#works .worklist{
+  display: flex;
+  gap: 40px;
+  position: fixed;
+  bottom: 70px;
+  left: 1105px;
+}
+#works .worklist li{
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: rgba(93,93,93,0.3);
+  cursor: pointer;
+}
+#works .worklist li.active:nth-child(1){
+  color: #3F519D;
+}
+#works .worklist li.active:nth-child(2){
+  color: #FAB951;
+}
+#works .worklist li.active:nth-child(3){
+  color: #E88138;
+}
+#works .worklist li.active:nth-child(4){
+  color: #6C73F4;
+}
+#works .worklist li.active:nth-child(5){
+  color: #6799F9;
+}
+#works .workcont{
+  width: 655px;
+  position: fixed;
+  top: 248px;
+  left: 1105px;
+}
+#works .workcont .label{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+#works .workcont .label h4{
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+#works .workcont .label a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 28px;
+  border: 1px solid #6E6857;
+}
+#works .workcont .label a:hover{
+  background-color: #6E6857;
+  color: #fff;
+}
+#works .workcont h2.project{
+  font-size: 6.4rem;
+  line-height: 1;
+  margin-left: 36px;
+}
+#works .workcont h2.project span{
+  color: #3F519D;
+}
+#works .workcont .project-detail{
+  border-top: 1px solid rgba(93,93,93,0.3);
+  margin-top: 50px;
+  padding-top: 26px;
+}
+#works .workcont .project-detail > li{
+  display: flex;
+  gap: 52px;
+  margin-top: 24px;
+}
+#works .workcont .project-detail > li > p:first-child{
+  width: 80px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+#works .workcont .project-detail > li > p:last-child{
+  width: calc(100% - 132px);
+  font-size: 1.6rem;
+}
+#works .workcont .project-detail > li > ul.color-list li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+#works .workcont .project-detail > li > ul.color-list li > div{
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: red;
+}
+#works .workcont .project-detail li > ul li p.color-txt{
+  font-weight: 300;
+}
+#works .workcont .project-detail li > p.font-txt{
+  font-weight: 600;
+}
+
+
+#works .workcont .samsung .project-detail > li > ul.color-list li:nth-child(1) > div{
+  background-color: #3F519D;
+}
+#works .workcont .samsung .project-detail > li > ul.color-list li:nth-child(2) > div{
+  background-color: #333333;
+}
+#works .workcont .samsung .project-detail > li > ul.color-list li:nth-child(3) > div{
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+
+
+/* query */
+@media(max-width:1400px){
+  .mainmid{
+    opacity: 0;
+  }
+  .mainmid li{
+    cursor: default;
+  }
+}

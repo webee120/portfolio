@@ -10,6 +10,12 @@ $(document).ready(function(){
   $('.index').hide();
   $('.eclipse .moon img:last-child').hide();
   $('#profile').hide();
+  $('#works').hide();
+  $('#additional').hide();
+  $('#works .workcont .twentynine').hide();
+  $('#works .workcont .tourzy').hide();
+  $('#works .workcont .stori').hide();
+  $('#works .workcont .lifemind').hide();
 
   let lastScrollTop = 10;
   let debounceTimer;
@@ -18,7 +24,7 @@ $(document).ready(function(){
   $('.progress');
 
   //스크롤
-
+  
   $(window).on('scroll', function() {
     let scrollTop = $(this).scrollTop();
 
@@ -37,6 +43,8 @@ $(document).ready(function(){
       if (scrollTop < lastScrollTop 
         && $('.cover').is(':hidden')
         && $('#profile').is(':hidden')
+        && $('#works').is(':hidden')
+        && $('#additional').is(':hidden')
         ){
 
           if($('.profile').hasClass('active')) {
@@ -103,8 +111,11 @@ $(document).ready(function(){
         }, 10);
       }
 
-      if (scrollTop > lastScrollTop && $('.mainmid').is(':hidden')
-          && $('#profile').is(':hidden')
+      if (scrollTop > lastScrollTop 
+        && $('.mainmid').is(':hidden')
+        && $('#profile').is(':hidden')
+        && $('#works').is(':hidden')
+        && $('#additional').is(':hidden')
       ){
         $('.cover').fadeOut();
         $('.mainmid').slideDown();
@@ -157,6 +168,8 @@ $(document).ready(function(){
       if (scrollTop > lastScrollTop 
         && $('.cover').is(':hidden')
         && $('#profile').is(':hidden')
+        && $('#works').is(':hidden')
+        && $('#additional').is(':hidden')
       ){
           if($('.profile').hasClass('active')){
             $('.works').addClass("active").siblings().removeClass("active")
@@ -216,25 +229,66 @@ $(document).ready(function(){
             }, 100);
           }
       }
+
+      if (scrollTop > lastScrollTop 
+        && $('.cover').is(':hidden')
+        && $('#profile').is(':hidden')
+        && $('#works').is(':visible')
+        && $('#additional').is(':hidden')
+      ){
+          if($('#works .worklist .samsung').hasClass('active')){
+            $('#works .worklist .twentynine').addClass('active').siblings().removeClass('active');
+            $('#works .workcont .twentynine').fadeIn().siblings().hide();
+          }
+
+          else if($('#works .worklist .twentynine').hasClass('active')){
+            $('#works .worklist .tourzy').addClass('active').siblings().removeClass('active');
+            $('#works .workcont .tourzy').fadeIn().siblings().hide();
+          }
+
+          else if($('#works .worklist .tourzy').hasClass('active')){
+            $('#works .worklist .stori').addClass('active').siblings().removeClass('active');
+            $('#works .workcont .stori').fadeIn().siblings().hide();
+          }
+
+          else if($('#works .worklist .stori').hasClass('active')){
+            $('#works .worklist .lifemind').addClass('active').siblings().removeClass('active');
+            $('#works .workcont .lifemind').fadeIn().siblings().hide();
+          }
+
+          else if($('#works .worklist .lifemind').hasClass('active')){
+            $('#works .worklist .samsung').addClass('active').siblings().removeClass('active');
+            $('#works .workcont .samsung').fadeIn().siblings().hide();
+          }
+          
+
+
+      }
     }, 50);
   });
 
   //클릭
+  var paddingValue = ($(window).width() - 750) / 2;
+
   $('.eclipse').click(function() {
+    // profile
     if ($('.cover').is(':hidden') 
         && $('.profile').hasClass('active')
     ){
       $('.scroll').fadeOut();
       $('.index').fadeOut();
+
+      $('.eclipse-wrapper').animate({ 
+        top:'230px',
+        padding: '0 300px',
+      }, 500,); 
+
       $('.eclipse').animate({ 
         width:'240px',
         height:'240px',
-        top:'230px',
-        margin: '0 300px',
       }, 500, function(){
         $(this).css({overflow:'visible',});
       }); 
-
       $('.sun, .sun2').hide();
 
       setTimeout(function() {
@@ -243,11 +297,108 @@ $(document).ready(function(){
       $(".eclipse .moon img:last-child").delay(1000).fadeIn();
 
       $('#profile').delay(1000).fadeIn();
-
       // svg
       setTimeout(function() {
         $('.progress').delay(2000).addClass('active');
       }, 1000);
     }
+
+    // works
+    if ($('.cover').is(':hidden') 
+        && $('.works').hasClass('active')
+    ){
+      $('.scroll').fadeOut();
+      $('.index').fadeOut();
+
+      $('.eclipse-wrapper').css('bottom', '');
+      $('.eclipse-wrapper').animate({ 
+        top:'0',
+        paddingLeft:'0'
+      }, 500,); 
+      $('.eclipse').animate({ 
+        width:'1000px',
+        height:'1000px',
+      }, 500, ); 
+      $('.sun, .sun2').hide();
+
+      setTimeout(function() {
+        $('.moon img:first-child').attr('src', 'img/moon6.png');
+      }, 600);
+      $('#works').delay(600).fadeIn();
+    }
+
   });
+
+  $('.back').click(function() {
+    if ($('.cover').is(':hidden') 
+      && $('.profile').hasClass('active')
+    ){
+      $('#profile').fadeOut();
+      $('.scroll').fadeIn();
+      $('.index').fadeIn();
+      $(".eclipse .moon img:last-child").fadeOut();
+
+      $('.eclipse-wrapper').css('top', '');
+      $('.eclipse-wrapper').animate({ 
+        bottom:'70px',
+        paddingLeft: paddingValue + 'px',
+        paddingRight: paddingValue + 'px',
+        height:'750px'
+      }, 500,); 
+      $('.eclipse').animate({ 
+        width:'750px',
+        height:'750px',
+      }, 500, function(){
+        $(this).css({overflow:'hidden'});
+      }); 
+
+      $('.sun, .sun2').delay(500).fadeIn();
+
+      $(".eclipse .moon img:last-child").fadeOut();
+      setTimeout(function() {
+        $('.moon img:first-child').attr('src', 'img/moon2.png');
+      }, 600);
+    }
+
+
+    if ($('.cover').is(':hidden') 
+      && $('.works').hasClass('active')
+    ){
+      
+    }
+
+
+    if ($('.cover').is(':hidden') 
+      && $('.additional').hasClass('active')
+    ){
+      
+    }
+  });
+
+
+
+  // 백 이후 패딩값 반영
+
+function debounce(func, wait) {
+  var timeout;
+  return function() {
+    clearTimeout(timeout);
+    timeout = setTimeout(func, wait);
+  };
+}
+
+function updatePaddingIfProfileHidden() {
+  if ($('#profile').is(':hidden')
+      && $('#works').is(':hidden')
+      && $('#additional').is(':hidden')
+    ){
+    var paddingValue = ($(window).width() - 750) / 2;
+    $('.eclipse-wrapper').css({
+      paddingLeft: paddingValue + 'px',
+      paddingRight: paddingValue + 'px'
+    });
+  }
+}
+
+$(window).resize(debounce(updatePaddingIfProfileHidden, 200));
 });
