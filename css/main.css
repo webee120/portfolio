@@ -309,28 +309,60 @@ h2.mainright span{
 }
 
 
+#profile .skills .graph{
+  position: relative;
+}
+#profile .skills .graph .skill-list{
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(2, 60px); 
+  gap: 20px;                  
+  padding: 10px;
+}
+#profile .skills .graph .skill-list li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+#profile .skills .graph .skill-list li:nth-child(5){
+  color: #f00;
+}
+#profile .skills .graph .skill-list li:nth-child(6){
+  color: #f00;
+}
+#profile .skills .graph .skill-list li:nth-child(7){
+  color: #f00;
+}
+#profile .skills .graph .skill-list li:nth-child(8){
+  color: #f00;
+}
 
-svg {
-  width: 340px;
+#profile .skills svg {
+  width: 320px;
   height: 160px;
 }
-circle {
+#profile .skills circle {
   fill: none;
   stroke: lightgray;
   stroke-width: 5;
 }
-progress {
+#profile .skills .progress {
   fill: none;
-  stroke: #3498db;
+  stroke: #6E6857;
   stroke-width: 5;
   stroke-linecap: round;
-  stroke-dasharray: 169.65;
-  stroke-dashoffset: 169.65;
+  stroke-dasharray: 188.5;
+  stroke-dashoffset: 188.5;
   transition: stroke-dashoffset 2s ease;
 }
-
-/* 각 원별 진행률 다르게 지정 가능 */
-.progress1.active { stroke-dashoffset: 16.965; } /* 90% */
-.progress2.active { stroke-dashoffset: 50; }     /* 임의값 예 */
-.progress3.active { stroke-dashoffset: 100; }
-/* ... */
+#profile .skills .progress1.active { stroke-dashoffset: 16; } 
+#profile .skills .progress2.active { stroke-dashoffset: 16; }  
+#profile .skills .progress3.active { stroke-dashoffset: 40; }
+#profile .skills .progress4.active { stroke-dashoffset: 80; }
+#profile .skills .progress5.active { stroke-dashoffset: 40; }
+#profile .skills .progress6.active { stroke-dashoffset: 40; }
+#profile .skills .progress7.active { stroke-dashoffset: 20; }
+#profile .skills .progress8.active { stroke-dashoffset: 80; }
