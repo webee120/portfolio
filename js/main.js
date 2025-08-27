@@ -28,6 +28,7 @@ $(document).ready(function(){
   let debounceTimer;
   var paddingValue = ($(window).width() - 750) / 2;
   var paddingValue2 = ($(window).width() - 1330) / 2;
+  var paddingValue3 = ($(window).width() - 1000);
 
   // svg
   $('.progress');
@@ -245,20 +246,25 @@ $(document).ready(function(){
         && $('#works').is(':visible')
         && $('#additional').is(':hidden')
       ){
+
           if($('#works .worklist .samsung').hasClass('active')){
             $('#works .worklist .twentynine').addClass('active').siblings().removeClass('active');
             $('#works .workcont .twentynine').fadeIn().siblings().hide();
-
             $('.moon img:first-child').attr('src', 'img/moon7-1.png');
             setTimeout(function() {
               $('.moon img:first-child').attr('src', 'img/moon7.png');
             }, 600);
 
-
             $('.eclipse-wrapper').animate({ 
               paddingRight:'0',
-              paddingLeft: '920px',
+              paddingLeft: paddingValue3,
             }, 600,);
+            $('#works .workcont > li .contimg').css({ 
+              left:'auto',
+              right:'0'
+            });
+
+            //
             $('.eclipse').animate({ 
               width:'500px',
               height: '500px',
@@ -267,18 +273,7 @@ $(document).ready(function(){
               width:'1000px',
               height: '1000px'
             }, 300,); 
-            $('#works .workcont > li .contimg').animate({ 
-              left:'920px',
-            }, 600,);
 
-            
-
-            $('#works .worklist').css({ 
-              left:'160px',
-            }); 
-            $('#works .workcont').css({ 
-              left:'160px',
-            }); 
             $('#works .worklist').hide();
             $('#works .workcont').hide();
             $('#works .worklist').delay(600).fadeIn();
@@ -288,17 +283,21 @@ $(document).ready(function(){
           else if($('#works .worklist .twentynine').hasClass('active')){
             $('#works .worklist .tourzy').addClass('active').siblings().removeClass('active');
             $('#works .workcont .tourzy').fadeIn().siblings().hide();
-
             $('.moon img:first-child').attr('src', 'img/moon8-1.png');
             setTimeout(function() {
               $('.moon img:first-child').attr('src', 'img/moon8.png');
             }, 600);
 
-
             $('.eclipse-wrapper').animate({ 
-              paddingRight:'0',
-              paddingLeft: '0',
+              paddingLeft:'0',
+              paddingRight: paddingValue3,
             }, 600,);
+            $('#works .workcont > li .contimg').css({ 
+              right:'auto',
+              left:'0'
+            }, 600,);
+
+            //
             $('.eclipse').animate({ 
               width:'500px',
               height: '500px',
@@ -307,17 +306,7 @@ $(document).ready(function(){
               width:'1000px',
               height: '1000px'
             }, 300,); 
-            $('#works .workcont > li .contimg').animate({ 
-              left:'0',
-            }, 600,); 
-            
 
-            $('#works .worklist').css({ 
-              left:'1105px',
-            }); 
-            $('#works .workcont').css({ 
-              left:'1105px',
-            }); 
             $('#works .worklist').hide();
             $('#works .workcont').hide();
             $('#works .worklist').delay(600).fadeIn();
@@ -327,17 +316,21 @@ $(document).ready(function(){
           else if($('#works .worklist .tourzy').hasClass('active')){
             $('#works .worklist .stori').addClass('active').siblings().removeClass('active');
             $('#works .workcont .stori').fadeIn().siblings().hide();
-
             $('.moon img:first-child').attr('src', 'img/moon9-1.png');
             setTimeout(function() {
               $('.moon img:first-child').attr('src', 'img/moon9.png');
             }, 600);
 
-          
             $('.eclipse-wrapper').animate({ 
               paddingRight:'0',
-              paddingLeft: '920px',
+              paddingLeft: paddingValue3,
             }, 600,);
+            $('#works .workcont > li .contimg').css({ 
+              left:'auto',
+              right:'0'
+            }, 600,);
+
+            //
             $('.eclipse').animate({ 
               width:'500px',
               height: '500px',
@@ -346,18 +339,7 @@ $(document).ready(function(){
               width:'1000px',
               height: '1000px'
             }, 300,); 
-            $('#works .workcont > li .contimg').animate({ 
-              left:'920px',
-            }, 600,); 
-
-
-
-            $('#works .worklist').css({ 
-              left:'160px',
-            }); 
-            $('#works .workcont').css({ 
-              left:'160px',
-            }); 
+            
             $('#works .worklist').hide();
             $('#works .workcont').hide();
             $('#works .worklist').delay(600).fadeIn();
@@ -367,18 +349,21 @@ $(document).ready(function(){
           else if($('#works .worklist .stori').hasClass('active')){
             $('#works .worklist .lifemind').addClass('active').siblings().removeClass('active');
             $('#works .workcont .lifemind').fadeIn().siblings().hide();
-
             $('.moon img:first-child').attr('src', 'img/moon10-1.png');
             setTimeout(function() {
               $('.moon img:first-child').attr('src', 'img/moon10.png');
             }, 600);
 
-
-
-           $('.eclipse-wrapper').animate({ 
-              paddingRight:'0',
-              paddingLeft: '0',
+            $('.eclipse-wrapper').animate({ 
+              paddingLeft:'0',
+              paddingRight: paddingValue3,
             }, 600,);
+            $('#works .workcont > li .contimg').css({ 
+              right:'auto',
+              left:'0'
+            }, 600,);
+
+            //
             $('.eclipse').animate({ 
               width:'500px',
               height: '500px',
@@ -387,17 +372,7 @@ $(document).ready(function(){
               width:'1000px',
               height: '1000px'
             }, 300,); 
-            $('#works .workcont > li .contimg').animate({ 
-              left:'0',
-            }, 600,); 
-
-
-            $('#works .worklist').css({ 
-              left:'1105px',
-            }); 
-            $('#works .workcont').css({ 
-              left:'1105px',
-            }); 
+    
             $('#works .worklist').hide();
             $('#works .workcont').hide();
             $('#works .worklist').delay(600).fadeIn();
@@ -407,17 +382,14 @@ $(document).ready(function(){
           else if($('#works .worklist .lifemind').hasClass('active')){
             $('#works .worklist .samsung').addClass('active').siblings().removeClass('active');
             $('#works .workcont .samsung').fadeIn().siblings().hide();
-
             $('.moon img:first-child').attr('src', 'img/moon6-1.png');
             setTimeout(function() {
               $('.moon img:first-child').attr('src', 'img/moon6.png');
             }, 200);
           }
           
-
-
       }
-    }, 50);
+    }, 500);
   });
 
   //클릭
@@ -457,6 +429,7 @@ $(document).ready(function(){
       }, 1000);
     }
 
+
     // works
     if ($('.cover').is(':hidden') 
         && $('.works').hasClass('active')
@@ -464,15 +437,17 @@ $(document).ready(function(){
       $('.scroll').fadeOut();
       $('.index').fadeOut();
 
-      // $('.eclipse-wrapper').css('bottom', '');
+    
+      
       $('.eclipse-wrapper').animate({ 
-        bottom:'0',
-        paddingLeft:'0'
+        paddingLeft:'0',
+        height:'1000px'
       }, 500,); 
       $('.eclipse').animate({ 
         width:'1000px',
         height:'1000px',
       }, 500, ); 
+
       $('.sun, .sun2').hide();
 
       setTimeout(function() {
@@ -481,6 +456,12 @@ $(document).ready(function(){
       $('#works').delay(600).fadeIn();
     }
 
+
+    if ($('.cover').is(':hidden') 
+        && $('.works').hasClass('active')
+    ){
+
+    }
   });
 
   $('.back').click(function() {
@@ -492,23 +473,18 @@ $(document).ready(function(){
       $('.index').fadeIn();
       $(".eclipse .moon img:last-child").fadeOut();
 
-
-
-      ////////////////////////////////
+      $('.eclipse-wrapper').animate({ 
+        height:'750px',
+        paddingLeft: paddingValue + 'px',
+        paddingRight: paddingValue + 'px',
+        paddingBottom: '0'
+      }, 500,); 
       $('.eclipse').animate({ 
         width:'750px',
         height:'750px',
       }, 500, function(){
         $(this).css({overflow:'hidden'});
       }); 
-      $('.eclipse-wrapper').animate({ 
-        height:'750px',
-        paddingLeft: paddingValue + 'px',
-        paddingRight: paddingValue + 'px',
-        paddingBottom: '0'
-      }, 500,);     
-      /////////////////////////////////
-
 
       $('.sun, .sun2').delay(500).fadeIn();
       $(".eclipse .moon img:last-child").fadeOut();
@@ -596,6 +572,23 @@ $(document).ready(function(){
         paddingLeft: paddingValue2 + 'px',
         paddingRight: paddingValue2 + 'px'
       });
+    }
+
+    if ($('#works').is(':visible')
+        && $('#profile').is(':hidden')
+        && $('#additional').is(':hidden')
+      ){
+        var paddingValue3 = ($(window).width() - 1000);
+        if($('#works .worklist .twentynine').hasClass('active')){
+          $('.eclipse-wrapper').css({
+              paddingLeft: paddingValue3 + 'px'
+          });
+        }
+        else if($('#works .worklist .stori').hasClass('active')){
+          $('.eclipse-wrapper').css({
+              paddingLeft: paddingValue3 + 'px'
+          });
+        }
     }
   }
 
