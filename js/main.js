@@ -159,20 +159,20 @@ $(document).ready(function(){
           height:'709px',
           top: '-70px',
           left: '-120px'
-        }, 1000);
+        }, 500);
 
-        $('.orbit').delay(1500).fadeIn();
-        $('.index').delay(1500).fadeIn();
+        $('.orbit').delay(1000).fadeIn();
+        $('.index').delay(1000).fadeIn();
 
         setTimeout(function() {
           $('.moon img:first-child').attr('src', 'img/moon2.png');
-        }, 1600);
+        }, 1000);
 
         setTimeout(function() {
           $('.eclipse').css({
           cursor:'pointer'
         })
-        }, 1600);
+        }, 1000);
       }
 
       if (scrollTop > lastScrollTop 
@@ -250,6 +250,13 @@ $(document).ready(function(){
           if($('#works .worklist .samsung').hasClass('active')){
             $('#works .worklist .twentynine').addClass('active').siblings().removeClass('active');
             $('#works .workcont .twentynine').fadeIn().siblings().hide();
+            $('.orbit img:nth-child(1)').animate({
+              opacity:'0'
+            });
+            $('.orbit img:nth-child(2)').animate({
+              opacity:'0'
+            });
+
             $('.moon img:first-child').attr('src', 'img/moon7-1.png');
             setTimeout(function() {
               $('.moon img:first-child').attr('src', 'img/moon7.png');
@@ -259,21 +266,23 @@ $(document).ready(function(){
               paddingRight:'0',
               paddingLeft: paddingValue3,
             }, 600,);
+            $('.eclipse').animate({ 
+              width:'500px',
+              height: '500px',
+            }, 200,); 
+            $('.eclipse').delay(200).animate({ 
+              width:'1000px',
+              height: '1000px'
+            }, 400,); 
+
+            $('#works .worklist').css({
+              paddingLeft:'0',
+              paddingRight:'786px'
+            });
             $('#works .workcont > li .contimg').css({ 
               left:'auto',
               right:'0'
             });
-
-            //
-            $('.eclipse').animate({ 
-              width:'500px',
-              height: '500px',
-            }, 300,); 
-            $('.eclipse').delay(300).animate({ 
-              width:'1000px',
-              height: '1000px'
-            }, 300,); 
-
             $('#works .worklist').hide();
             $('#works .workcont').hide();
             $('#works .worklist').delay(600).fadeIn();
@@ -283,6 +292,13 @@ $(document).ready(function(){
           else if($('#works .worklist .twentynine').hasClass('active')){
             $('#works .worklist .tourzy').addClass('active').siblings().removeClass('active');
             $('#works .workcont .tourzy').fadeIn().siblings().hide();
+            $('.orbit img:nth-child(1)').animate({
+              opacity:'30%'
+            });
+            $('.orbit img:nth-child(2)').animate({
+              opacity:'10%'
+            });
+
             $('.moon img:first-child').attr('src', 'img/moon8-1.png');
             setTimeout(function() {
               $('.moon img:first-child').attr('src', 'img/moon8.png');
@@ -292,21 +308,25 @@ $(document).ready(function(){
               paddingLeft:'0',
               paddingRight: paddingValue3,
             }, 600,);
+            $('.eclipse').animate({ 
+              width:'500px',
+              height: '500px',
+              marginTop: '500px'
+            }, 200,); 
+            $('.eclipse').delay(200).animate({ 
+              width:'1000px',
+              height: '1000px',
+              marginTop: '0'
+            }, 400,); 
+
+            $('#works .worklist').css({
+              paddingRight:'0',
+              paddingLeft:'786px'
+            });
             $('#works .workcont > li .contimg').css({ 
               right:'auto',
               left:'0'
             }, 600,);
-
-            //
-            $('.eclipse').animate({ 
-              width:'500px',
-              height: '500px',
-            }, 300,); 
-            $('.eclipse').delay(300).animate({ 
-              width:'1000px',
-              height: '1000px'
-            }, 300,); 
-
             $('#works .worklist').hide();
             $('#works .workcont').hide();
             $('#works .worklist').delay(600).fadeIn();
@@ -316,6 +336,13 @@ $(document).ready(function(){
           else if($('#works .worklist .tourzy').hasClass('active')){
             $('#works .worklist .stori').addClass('active').siblings().removeClass('active');
             $('#works .workcont .stori').fadeIn().siblings().hide();
+            $('.orbit img:nth-child(1)').animate({
+              opacity:'0'
+            });
+            $('.orbit img:nth-child(2)').animate({
+              opacity:'0'
+            });
+
             $('.moon img:first-child').attr('src', 'img/moon9-1.png');
             setTimeout(function() {
               $('.moon img:first-child').attr('src', 'img/moon9.png');
@@ -325,21 +352,23 @@ $(document).ready(function(){
               paddingRight:'0',
               paddingLeft: paddingValue3,
             }, 600,);
+            $('.eclipse').animate({ 
+              width:'500px',
+              height: '500px',
+            }, 200,); 
+            $('.eclipse').delay(200).animate({ 
+              width:'1000px',
+              height: '1000px'
+            }, 400,); 
+            
+            $('#works .worklist').css({
+              paddingLeft:'0',
+              paddingRight:'786px'
+            });
             $('#works .workcont > li .contimg').css({ 
               left:'auto',
               right:'0'
             }, 600,);
-
-            //
-            $('.eclipse').animate({ 
-              width:'500px',
-              height: '500px',
-            }, 300,); 
-            $('.eclipse').delay(300).animate({ 
-              width:'1000px',
-              height: '1000px'
-            }, 300,); 
-            
             $('#works .worklist').hide();
             $('#works .workcont').hide();
             $('#works .worklist').delay(600).fadeIn();
@@ -349,6 +378,13 @@ $(document).ready(function(){
           else if($('#works .worklist .stori').hasClass('active')){
             $('#works .worklist .lifemind').addClass('active').siblings().removeClass('active');
             $('#works .workcont .lifemind').fadeIn().siblings().hide();
+            $('.orbit img:nth-child(1)').animate({
+              opacity:'30%'
+            });
+            $('.orbit img:nth-child(2)').animate({
+              opacity:'10%'
+            });
+
             $('.moon img:first-child').attr('src', 'img/moon10-1.png');
             setTimeout(function() {
               $('.moon img:first-child').attr('src', 'img/moon10.png');
@@ -358,21 +394,25 @@ $(document).ready(function(){
               paddingLeft:'0',
               paddingRight: paddingValue3,
             }, 600,);
+            $('.eclipse').animate({ 
+              width:'500px',
+              height: '500px',
+              marginTop: '500px'
+            }, 200,); 
+            $('.eclipse').delay(200).animate({ 
+              width:'1000px',
+              height: '1000px',
+              marginTop: '0'
+            }, 400,); 
+    
+            $('#works .worklist').css({
+              paddingRight:'0',
+              paddingLeft:'786px'
+            });
             $('#works .workcont > li .contimg').css({ 
               right:'auto',
               left:'0'
             }, 600,);
-
-            //
-            $('.eclipse').animate({ 
-              width:'500px',
-              height: '500px',
-            }, 300,); 
-            $('.eclipse').delay(300).animate({ 
-              width:'1000px',
-              height: '1000px'
-            }, 300,); 
-    
             $('#works .worklist').hide();
             $('#works .workcont').hide();
             $('#works .worklist').delay(600).fadeIn();
@@ -387,9 +427,8 @@ $(document).ready(function(){
               $('.moon img:first-child').attr('src', 'img/moon6.png');
             }, 200);
           }
-          
       }
-    }, 500);
+    }, 200);
   });
 
   //클릭
@@ -398,7 +437,14 @@ $(document).ready(function(){
     // profile
     if ($('.cover').is(':hidden') 
         && $('.profile').hasClass('active')
-    ){
+    ){ 
+      $('.orbit img:nth-child(1)').animate({
+        opacity:'30%'
+      });
+      $('.orbit img:nth-child(2)').animate({
+        opacity:'10%'
+      });
+      
       $('.scroll').fadeOut();
       $('.index').fadeOut();
 
@@ -434,11 +480,16 @@ $(document).ready(function(){
     if ($('.cover').is(':hidden') 
         && $('.works').hasClass('active')
     ){
+      $('.orbit img:nth-child(1)').animate({
+        opacity:'30%'
+      });
+      $('.orbit img:nth-child(2)').animate({
+        opacity:'10%'
+      });
+
       $('.scroll').fadeOut();
       $('.index').fadeOut();
 
-    
-      
       $('.eclipse-wrapper').animate({ 
         paddingLeft:'0',
         height:'1000px'
@@ -460,7 +511,15 @@ $(document).ready(function(){
     if ($('.cover').is(':hidden') 
         && $('.works').hasClass('active')
     ){
+      $('.orbit img:nth-child(1)').animate({
+        opacity:'30%'
+      });
+      $('.orbit img:nth-child(2)').animate({
+        opacity:'10%'
+      });
 
+      //
+      //
     }
   });
 
@@ -468,6 +527,13 @@ $(document).ready(function(){
     if ($('.cover').is(':hidden') 
       && $('.profile').hasClass('active')
     ){
+      $('.orbit img:nth-child(1)').animate({
+        opacity:'80%'
+      });
+      $('.orbit img:nth-child(2)').animate({
+        opacity:'30%'
+      });
+
       $('#profile').fadeOut();
       $('.scroll').fadeIn();
       $('.index').fadeIn();
@@ -487,7 +553,6 @@ $(document).ready(function(){
       }); 
 
       $('.sun, .sun2').delay(500).fadeIn();
-      $(".eclipse .moon img:last-child").fadeOut();
       setTimeout(function() {
         $('.moon img:first-child').attr('src', 'img/moon2.png');
       }, 600);
@@ -497,7 +562,50 @@ $(document).ready(function(){
     if ($('.cover').is(':hidden') 
       && $('.works').hasClass('active')
     ){
+      $('.orbit img:nth-child(1)').animate({
+        opacity:'80%'
+      });
+      $('.orbit img:nth-child(2)').animate({
+        opacity:'30%'
+      });
       
+      $('#works .worklist .samsung').addClass('active').siblings().removeClass('active');
+      $('#works .workcont .samsung').show().siblings().hide();
+      $('.moon img:first-child').attr('src', 'img/moon6.png');
+
+      $('#works .worklist').css({
+        paddingRight:'0',
+        paddingLeft:'786px'
+      });
+
+      setTimeout(function() {
+        $('#works .workcont > li .contimg').css({
+          right:'auto', 
+          left:'0'
+          });
+      }, 2000);
+
+      $('#works').fadeOut();
+      $('.scroll').fadeIn();
+      $('.index').fadeIn();
+
+      $('.eclipse-wrapper').animate({ 
+        height:'750px',
+        paddingLeft: paddingValue + 'px',
+        paddingRight: paddingValue + 'px',
+      }, 500,); 
+      $('.eclipse').animate({ 
+        width:'750px',
+        height:'750px',
+      }, 500, function(){
+        $(this).css({overflow:'hidden'});
+      }); 
+
+      $('.sun2').delay(500).fadeIn();
+      $(".eclipse .moon img:last-child").fadeOut();
+      setTimeout(function() {
+        $('.moon img:first-child').attr('src', 'img/moon3.png');
+      }, 600);
     }
 
 
