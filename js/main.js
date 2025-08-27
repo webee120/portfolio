@@ -27,6 +27,7 @@ $(document).ready(function(){
   let lastScrollTop = 10;
   let debounceTimer;
   var paddingValue = ($(window).width() - 750) / 2;
+  var paddingValue2 = ($(window).width() - 1330) / 2;
 
   // svg
   $('.progress');
@@ -430,8 +431,10 @@ $(document).ready(function(){
       $('.index').fadeOut();
 
       $('.eclipse-wrapper').animate({ 
-        top:'230px',
-        padding: '0 300px',
+        height:'546px',
+        paddingLeft: paddingValue2 + 'px',
+        paddingRight: paddingValue2 + 'px',
+        paddingBottom: '306px',
       }, 500,); 
 
       $('.eclipse').animate({ 
@@ -461,9 +464,9 @@ $(document).ready(function(){
       $('.scroll').fadeOut();
       $('.index').fadeOut();
 
-      $('.eclipse-wrapper').css('bottom', '');
+      // $('.eclipse-wrapper').css('bottom', '');
       $('.eclipse-wrapper').animate({ 
-        top:'0',
+        bottom:'0',
         paddingLeft:'0'
       }, 500,); 
       $('.eclipse').animate({ 
@@ -489,22 +492,25 @@ $(document).ready(function(){
       $('.index').fadeIn();
       $(".eclipse .moon img:last-child").fadeOut();
 
-      $('.eclipse-wrapper').css('top', '');
-      $('.eclipse-wrapper').animate({ 
-        bottom:'70px',
-        paddingLeft: paddingValue + 'px',
-        paddingRight: paddingValue + 'px',
-        height:'750px'
-      }, 500,); 
+
+
+      ////////////////////////////////
       $('.eclipse').animate({ 
         width:'750px',
         height:'750px',
       }, 500, function(){
         $(this).css({overflow:'hidden'});
       }); 
+      $('.eclipse-wrapper').animate({ 
+        height:'750px',
+        paddingLeft: paddingValue + 'px',
+        paddingRight: paddingValue + 'px',
+        paddingBottom: '0'
+      }, 500,);     
+      /////////////////////////////////
+
 
       $('.sun, .sun2').delay(500).fadeIn();
-
       $(".eclipse .moon img:last-child").fadeOut();
       setTimeout(function() {
         $('.moon img:first-child').attr('src', 'img/moon2.png');
@@ -578,6 +584,17 @@ $(document).ready(function(){
       $('.eclipse-wrapper').css({
         paddingLeft: paddingValue + 'px',
         paddingRight: paddingValue + 'px'
+      });
+    }
+
+    if ($('#profile').is(':visible')
+        && $('#works').is(':hidden')
+        && $('#additional').is(':hidden')
+      ){
+      var paddingValue2 = ($(window).width() - 1330) / 2;
+      $('.eclipse-wrapper').css({
+        paddingLeft: paddingValue2 + 'px',
+        paddingRight: paddingValue2 + 'px'
       });
     }
   }

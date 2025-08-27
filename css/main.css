@@ -18,9 +18,9 @@ h1.mainleft{
   font-weight: 100; 
   line-height: 1.25;
   position: fixed;
-  bottom: 280px;
+  top: calc(50% - 10px); 
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 99999;
   cursor: pointer;
 }
@@ -61,7 +61,8 @@ h2.mainright span{
 
 .eclipse-wrapper{
   position: fixed;
-  bottom: 70px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 100%;
   padding: 0 calc((100% - 750px) / 2);
 }
@@ -269,18 +270,22 @@ h2.mainright span{
 /* profile */
 #profile .state{
   position: fixed;
-  width: 250px;
+  width: calc(250px + 1080px);
   text-align: center;
-  top: 480px;
-  left: 295px;
+  padding-top: calc(560px - 315px);
+  padding-right: 1080px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #profile .state h3{
   font-size: 2.4rem;
+  margin-top: 12px;
 }
 #profile .state > p{
   font-size: 1.4rem;
   opacity: 0.5;
-  margin-bottom: 52px;
+  margin-bottom: 40px;
 }
 #profile .state ul{
   display: flex;
@@ -302,14 +307,15 @@ h2.mainright span{
 
 #profile .career{
   position: fixed;
-  top: 242px;
-  left: 665px;
-  width: 960px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(250px + 1080px);
   height: 546px;
   display: flex;
   justify-content: space-between;
-  border-left: 1px solid rgba(110,104,87,0.3);
-  padding-left: 120px;
+  /* border-left: 1px solid rgba(110,104,87,0.3); */
+  padding-left: calc(250px + 240px);
 }
 #profile .career > div{
   height: 100%;
@@ -584,7 +590,7 @@ h2.mainright span{
   width: 1000px;
   height: 1000px;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   border-radius: 500px;
   box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.5);
