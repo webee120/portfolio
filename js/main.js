@@ -3,6 +3,13 @@ $(document).ready(function(){
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
+
+  window.addEventListener('wheel', function(e) {
+    if (e.ctrlKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
   
   $(window).scrollTop(10);
   $('.mainmid').hide();
@@ -19,6 +26,7 @@ $(document).ready(function(){
 
   let lastScrollTop = 10;
   let debounceTimer;
+  var paddingValue = ($(window).width() - 750) / 2;
 
   // svg
   $('.progress');
@@ -239,26 +247,170 @@ $(document).ready(function(){
           if($('#works .worklist .samsung').hasClass('active')){
             $('#works .worklist .twentynine').addClass('active').siblings().removeClass('active');
             $('#works .workcont .twentynine').fadeIn().siblings().hide();
+
+            $('.moon img:first-child').attr('src', 'img/moon7-1.png');
+            setTimeout(function() {
+              $('.moon img:first-child').attr('src', 'img/moon7.png');
+            }, 600);
+
+
+            $('.eclipse-wrapper').animate({ 
+              paddingRight:'0',
+              paddingLeft: '920px',
+            }, 600,);
+            $('.eclipse').animate({ 
+              width:'500px',
+              height: '500px',
+            }, 300,); 
+            $('.eclipse').delay(300).animate({ 
+              width:'1000px',
+              height: '1000px'
+            }, 300,); 
+            $('#works .workcont > li .contimg').animate({ 
+              left:'920px',
+            }, 600,);
+
+            
+
+            $('#works .worklist').css({ 
+              left:'160px',
+            }); 
+            $('#works .workcont').css({ 
+              left:'160px',
+            }); 
+            $('#works .worklist').hide();
+            $('#works .workcont').hide();
+            $('#works .worklist').delay(600).fadeIn();
+            $('#works .workcont').delay(600).fadeIn();
           }
 
           else if($('#works .worklist .twentynine').hasClass('active')){
             $('#works .worklist .tourzy').addClass('active').siblings().removeClass('active');
             $('#works .workcont .tourzy').fadeIn().siblings().hide();
+
+            $('.moon img:first-child').attr('src', 'img/moon8-1.png');
+            setTimeout(function() {
+              $('.moon img:first-child').attr('src', 'img/moon8.png');
+            }, 600);
+
+
+            $('.eclipse-wrapper').animate({ 
+              paddingRight:'0',
+              paddingLeft: '0',
+            }, 600,);
+            $('.eclipse').animate({ 
+              width:'500px',
+              height: '500px',
+            }, 300,); 
+            $('.eclipse').delay(300).animate({ 
+              width:'1000px',
+              height: '1000px'
+            }, 300,); 
+            $('#works .workcont > li .contimg').animate({ 
+              left:'0',
+            }, 600,); 
+            
+
+            $('#works .worklist').css({ 
+              left:'1105px',
+            }); 
+            $('#works .workcont').css({ 
+              left:'1105px',
+            }); 
+            $('#works .worklist').hide();
+            $('#works .workcont').hide();
+            $('#works .worklist').delay(600).fadeIn();
+            $('#works .workcont').delay(600).fadeIn();
           }
 
           else if($('#works .worklist .tourzy').hasClass('active')){
             $('#works .worklist .stori').addClass('active').siblings().removeClass('active');
             $('#works .workcont .stori').fadeIn().siblings().hide();
+
+            $('.moon img:first-child').attr('src', 'img/moon9-1.png');
+            setTimeout(function() {
+              $('.moon img:first-child').attr('src', 'img/moon9.png');
+            }, 600);
+
+          
+            $('.eclipse-wrapper').animate({ 
+              paddingRight:'0',
+              paddingLeft: '920px',
+            }, 600,);
+            $('.eclipse').animate({ 
+              width:'500px',
+              height: '500px',
+            }, 300,); 
+            $('.eclipse').delay(300).animate({ 
+              width:'1000px',
+              height: '1000px'
+            }, 300,); 
+            $('#works .workcont > li .contimg').animate({ 
+              left:'920px',
+            }, 600,); 
+
+
+
+            $('#works .worklist').css({ 
+              left:'160px',
+            }); 
+            $('#works .workcont').css({ 
+              left:'160px',
+            }); 
+            $('#works .worklist').hide();
+            $('#works .workcont').hide();
+            $('#works .worklist').delay(600).fadeIn();
+            $('#works .workcont').delay(600).fadeIn();
           }
 
           else if($('#works .worklist .stori').hasClass('active')){
             $('#works .worklist .lifemind').addClass('active').siblings().removeClass('active');
             $('#works .workcont .lifemind').fadeIn().siblings().hide();
+
+            $('.moon img:first-child').attr('src', 'img/moon10-1.png');
+            setTimeout(function() {
+              $('.moon img:first-child').attr('src', 'img/moon10.png');
+            }, 600);
+
+
+
+           $('.eclipse-wrapper').animate({ 
+              paddingRight:'0',
+              paddingLeft: '0',
+            }, 600,);
+            $('.eclipse').animate({ 
+              width:'500px',
+              height: '500px',
+            }, 300,); 
+            $('.eclipse').delay(300).animate({ 
+              width:'1000px',
+              height: '1000px'
+            }, 300,); 
+            $('#works .workcont > li .contimg').animate({ 
+              left:'0',
+            }, 600,); 
+
+
+            $('#works .worklist').css({ 
+              left:'1105px',
+            }); 
+            $('#works .workcont').css({ 
+              left:'1105px',
+            }); 
+            $('#works .worklist').hide();
+            $('#works .workcont').hide();
+            $('#works .worklist').delay(600).fadeIn();
+            $('#works .workcont').delay(600).fadeIn();
           }
 
           else if($('#works .worklist .lifemind').hasClass('active')){
             $('#works .worklist .samsung').addClass('active').siblings().removeClass('active');
             $('#works .workcont .samsung').fadeIn().siblings().hide();
+
+            $('.moon img:first-child').attr('src', 'img/moon6-1.png');
+            setTimeout(function() {
+              $('.moon img:first-child').attr('src', 'img/moon6.png');
+            }, 200);
           }
           
 
@@ -268,7 +420,6 @@ $(document).ready(function(){
   });
 
   //클릭
-  var paddingValue = ($(window).width() - 750) / 2;
 
   $('.eclipse').click(function() {
     // profile
@@ -375,30 +526,61 @@ $(document).ready(function(){
     }
   });
 
+  //hover 스크롤
+
+  $('#works .workcont .samsung .contimg').hover(
+    function() {
+      var imgHeight = $(this).find('img').height();
+      var containerHeight = $(this).height();
+      var moveY = containerHeight - imgHeight;
+
+      if (moveY < 0) {
+        $(this).find('img').stop().animate({ top: moveY + 'px' }, 5000);
+      }
+    },
+    function() {
+      $(this).find('img').stop().animate({ top: '180px' }, 100); // 이 부분 속도 빠르게 (150ms)
+    }
+  );
+
+  $('#works .workcont .stori .contimg').hover(
+    function() {
+      var imgHeight = $(this).find('img').height();
+      var containerHeight = $(this).height();
+      var moveY = containerHeight - imgHeight;
+
+      if (moveY < 0) {
+        $(this).find('img').stop().animate({ top: moveY + 'px' }, 20000);
+      }
+    },
+    function() {
+      $(this).find('img').stop().animate({ top: '180px' }, 200); // 이 부분 속도 빠르게 (150ms)
+    }
+  );
 
 
   // 백 이후 패딩값 반영
 
-function debounce(func, wait) {
-  var timeout;
-  return function() {
-    clearTimeout(timeout);
-    timeout = setTimeout(func, wait);
-  };
-}
-
-function updatePaddingIfProfileHidden() {
-  if ($('#profile').is(':hidden')
-      && $('#works').is(':hidden')
-      && $('#additional').is(':hidden')
-    ){
-    var paddingValue = ($(window).width() - 750) / 2;
-    $('.eclipse-wrapper').css({
-      paddingLeft: paddingValue + 'px',
-      paddingRight: paddingValue + 'px'
-    });
+  function debounce(func, wait) {
+    var timeout;
+    return function() {
+      clearTimeout(timeout);
+      timeout = setTimeout(func, wait);
+    };
   }
-}
 
-$(window).resize(debounce(updatePaddingIfProfileHidden, 200));
+  function updatePaddingIfProfileHidden() {
+    if ($('#profile').is(':hidden')
+        && $('#works').is(':hidden')
+        && $('#additional').is(':hidden')
+      ){
+      var paddingValue = ($(window).width() - 750) / 2;
+      $('.eclipse-wrapper').css({
+        paddingLeft: paddingValue + 'px',
+        paddingRight: paddingValue + 'px'
+      });
+    }
+  }
+
+  $(window).resize(debounce(updatePaddingIfProfileHidden, 200));
 });

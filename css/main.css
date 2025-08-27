@@ -82,14 +82,14 @@ h2.mainright span{
   left: 20px;
   border-radius: 50%;
   box-shadow: 15px 5px 25px 10px rgba(0,0,0,0.5);
-  z-index: 999;
+  z-index: 9999;
 }
 .eclipse .sun2{
   position: absolute;
   top: -31px;
   left:-21px;
   border-radius: 50%;
-  z-index: 99;
+  z-index: 999;
   display: none;
 }
 .eclipse .sun img,
@@ -438,7 +438,7 @@ h2.mainright span{
 }
 #works .workcont .label h4{
   font-size: 2.8rem;
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1;
 }
 #works .workcont .label a{
@@ -457,9 +457,6 @@ h2.mainright span{
   font-size: 6.4rem;
   line-height: 1;
   margin-left: 36px;
-}
-#works .workcont h2.project span{
-  color: #3F519D;
 }
 #works .workcont .project-detail{
   border-top: 1px solid rgba(93,93,93,0.3);
@@ -497,9 +494,13 @@ h2.mainright span{
 }
 #works .workcont .project-detail li > p.font-txt{
   font-weight: 600;
+  font-size: 2rem;
 }
 
 
+#works .workcont .samsung h2.project span{
+  color: #3F519D; 
+}
 #works .workcont .samsung .project-detail > li > ul.color-list li:nth-child(1) > div{
   background-color: #3F519D;
 }
@@ -511,6 +512,102 @@ h2.mainright span{
   border: 1px solid #ddd;
 }
 
+#works .workcont .twentynine h2.project span{
+  color: #FAB951; 
+}
+#works .workcont .twentynine .project-detail > li > ul.color-list li:nth-child(1) > div{
+  background-color: #000000;
+}
+#works .workcont .twentynine .project-detail > li > ul.color-list li:nth-child(2) > div{
+  background-color: #FFFFFF;
+  border: 1px solid #ddd;
+}
+#works .workcont .twentynine .project-detail > li > ul.color-list li:nth-child(3) > div{
+  background-color: #3F519D;
+}
+#works .workcont .twentynine .project-detail > li > ul.color-list li:nth-child(4) > div{
+  background-color: #FF694E;
+}
+
+
+#works .workcont .tourzy h2.project span{
+  color: #E88138; 
+}
+#works .workcont .tourzy .project-detail > li > ul.color-list li:nth-child(1) > div{
+  background-color: #E88138;
+}
+#works .workcont .tourzy .project-detail > li > ul.color-list li:nth-child(2) > div{
+  background-color: #333333;
+}
+#works .workcont .tourzy .project-detail > li > ul.color-list li:nth-child(3) > div{
+  background-color: #FFFFFF;
+    border: 1px solid #ddd;
+}
+
+
+#works .workcont .stori h2.project span{
+  color: #6C73F4; 
+}
+#works .workcont .stori .project-detail > li > ul.color-list li:nth-child(1) > div{
+  background-color: #6C73F4;
+}
+#works .workcont .stori .project-detail > li > ul.color-list li:nth-child(2) > div{
+  background-color: #A0CB68;
+}
+#works .workcont .stori .project-detail > li > ul.color-list li:nth-child(3) > div{
+  background-color: #333333;
+}
+#works .workcont .stori .project-detail > li > ul.color-list li:nth-child(4) > div{
+  background-color: #EDEDED;
+    border: 1px solid #ccc;
+}
+
+
+#works .workcont .lifemind h2.project span{
+  color: #5E90F1; 
+}
+#works .workcont .lifemind .project-detail > li > ul.color-list li:nth-child(1) > div{
+  background-color: #5E90F1;
+}
+#works .workcont .lifemind .project-detail > li > ul.color-list li:nth-child(2) > div{
+  background-color: #609BE1;
+}
+#works .workcont .lifemind .project-detail > li > ul.color-list li:nth-child(3) > div{
+  background-color: #96D0D2;
+}
+#works .workcont .lifemind .project-detail > li > ul.color-list li:nth-child(4) > div{
+  background-color: #FFFFFF;
+    border: 1px solid #ddd;
+}
+
+#works .workcont > li .contimg{
+  width: 1000px;
+  height: 1000px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 500px;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+#works .workcont > .samsung .contimg img{
+  border-radius: 20px;
+  width: 764px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 180px;
+  left: 160px;
+  height: auto;
+}
+#works .workcont > .stori .contimg img{
+  border-radius: 20px;
+  width: 764px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 180px;
+  left: 160px;
+  height: auto;
+}
 
 
 /* query */
