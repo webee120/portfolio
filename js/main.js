@@ -9,7 +9,7 @@ $(document).ready(function(){
       e.preventDefault();
     }
   }, { passive: false });
-  $(window).scrollTop(10);
+  $(window).scrollTop(1);
 
   $('.loading').hide();
   $('.mainmid').hide();
@@ -24,7 +24,7 @@ $(document).ready(function(){
   $('#works .workcont .stori').hide();
   $('#works .workcont .lifemind').hide();
 
-  let lastScrollTop = 10;
+  let lastScrollTop = 1;
   let debounceTimer;
 
   var paddingValue = ($(window).width() - 750) / 2;
@@ -56,7 +56,7 @@ $(document).ready(function(){
       
       if (scrollTop < lastScrollTop){
         setTimeout(function() {
-          $(window).scrollTop(10);
+          $(window).scrollTop(1);
         }, 10);
       }
 
@@ -356,7 +356,8 @@ $(document).ready(function(){
 
       if (scrollTop > lastScrollTop){
         setTimeout(function() {
-          $(window).scrollTop(10);
+          $(window).scrollTop(1
+          );
         }, 10);
       }
 
