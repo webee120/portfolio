@@ -1,6 +1,7 @@
 @charset "uft-8";
 
 /* common */
+
 body{
   padding: 10px 0;
 }
@@ -10,6 +11,16 @@ body{
   height: calc(100vh + 1px);
   overflow: hidden;
   position: relative;
+}
+
+.loading{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
 }
 
 h1.mainleft{
