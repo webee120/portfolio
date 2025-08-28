@@ -540,6 +540,7 @@ h2.mainright span{
   border-top: 1px solid rgba(93,93,93,0.3);
   margin-top: 50px;
   padding-top: 26px;
+  height: 404px;
 }
 #works .workcont .project-detail > li{
   display: flex;
@@ -557,6 +558,7 @@ h2.mainright span{
 }
 #works .workcont .project-detail > li > p.info-txt{
   font-weight: 300;
+  line-height: 1.5;
 }
 #works .workcont .project-detail > li > p.info-txt span{
   display: block;
