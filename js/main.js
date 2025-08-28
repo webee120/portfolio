@@ -1,8 +1,19 @@
 $(document).ready(function(){
   // 실행
+  $('img').each(function() {
+    $(this).css('display', 'none'); // 처음에 모든 이미지 숨기기
+    $(this).on('load', function() {
+      $(this).fadeIn('slow'); // 이미지 로드 완료 시 부드럽게 보이기
+    });
+    if (this.complete) {
+      $(this).trigger('load'); // 캐시된 이미지에 대응
+    }
+  });
+
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
+
 
   window.addEventListener('wheel', function(e) {
     if (e.ctrlKey) {
