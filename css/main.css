@@ -487,7 +487,6 @@ h2.mainright span{
   color: #6799F9;
 }
 
-
 #works .workcont .contbox{
   width: 1600px;
   position: fixed;
@@ -556,6 +555,15 @@ h2.mainright span{
   width: calc(100% - 132px);
   font-size: 1.6rem;
 }
+#works .workcont .project-detail > li > p.info-txt{
+  font-weight: 300;
+}
+#works .workcont .project-detail > li > p.info-txt span{
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
 #works .workcont .project-detail > li > ul.color-list li{
   display: flex;
   align-items: center;
