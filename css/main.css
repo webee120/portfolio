@@ -702,6 +702,205 @@ h2.mainright span{
 }
 
 
+/* additional */
+
+#additional .contimg2{
+  position: fixed;
+  width: 100%;
+  height: 800px;
+  padding: 0 calc((100% - 1600px) / 2);
+  min-width: 1600px;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  overflow: hidden;
+}
+#additional .contimg2 .contimg2inner{
+  position: relative;
+  height: 100%;
+  width: 1600px;
+  border-radius: 800px 800px 0 0;
+  overflow: hidden;
+}
+#additional .contimg2 .contimg2inner .contimgshadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.5);
+  border-radius: 800px 800px 0 0;
+  z-index: 9999;
+}
+#additional .contimg2 .contimg2inner .progressbar{
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  bottom: 230px;
+  left: 364px;
+}
+#additional .contimg2 .contimg2inner .progressbar .bar1{
+  background-color: #6E6857;
+  height: 40px;
+  border-radius: 2px;
+}
+#additional .contimg2 .contimg2inner .progressbar .bar2{
+  background-color: #6E6857;
+  opacity: 50%;
+  height: 12px;
+  border-radius: 2px;
+}
+
+#additional .contimg2 .contimg2inner .backposition{
+  padding: 0;
+  width: 84px;
+  position: absolute;
+  left: 280px;
+  top: 700px;
+  transform: translateX(0);
+}
+
+#additional .contimg2 .contimg2inner .graduate .tit{
+  position: absolute;
+  left: 168px;
+  bottom: 226px;
+  text-align: right;  
+}
+#additional .contimg2 .contimg2inner .graduate .tit h4{
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+#additional .contimg2 .contimg2inner .graduate .tit p{
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+#additional .contimg2 .contimg2inner .graduate img{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#additional .contimg2 .contimg2inner .writing .tit{
+  position: absolute;
+  left: 208px;
+  bottom: 226px;
+  text-align: right;  
+}
+#additional .contimg2 .contimg2inner .writing .tit h4{
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+#additional .contimg2 .contimg2inner .writing .tit p{
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+
+#additional .contimg2 .contimg2inner .writing a.writlink{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 28px;
+  border: 1px solid #6E6857;
+  position: absolute;
+  top: 192px;
+  left: 448px;
+  z-index: 9999;
+}
+#additional .contimg2 .contimg2inner .writing a.writlink:hover{
+  background-color: #6E6857;
+  color: #fff;
+}
+#additional .contimg2 .contimg2inner .writing .writlist{
+  display: flex;
+  gap: 12px;
+  font-size: 2.4rem;
+  position: absolute;
+  top: 236px;
+  left: 448px;
+  z-index: 9999;
+  cursor: pointer;
+}
+#additional .contimg2 .contimg2inner .writing .writlist li{
+  font-weight: 300;
+  opacity: 0.5;
+}
+#additional .contimg2 .contimg2inner .writing .writlist li.active{
+  font-weight: 800;
+  opacity: 1;
+}
+
+#additional .contimg2 .contimg2inner .writing .writcont{
+  width: 1080px;
+  padding: 140px 80px 40px;
+  background: url(../img/paper.png) no-repeat center top / cover;
+  border-radius: 20px;
+  position: absolute;
+  top: 354px;
+  left: 448px;
+  z-index: 999;
+  box-shadow: 0 0 33px rgba(0, 0, 0, 0.25);
+}
+#additional .contimg2 .contimg2inner .writing .writcont li{
+ position: relative;
+}
+#additional .contimg2 .contimg2inner .writing .writcont li .blur{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ background: url(../img/paper.png) no-repeat center top / cover;
+ opacity: 15%;
+ border-radius: 20px;
+}
+#additional .contimg2 .contimg2inner .writing .writcont li h5{
+ font-size: 4.8rem;
+ margin-bottom: 102px;
+}
+#additional .contimg2 .contimg2inner .writing .writcont li:first-child h5{
+  font-size: 3.6rem;
+}
+#additional .contimg2 .contimg2inner .writing .writcont li p{
+ font-size: 2rem;
+ line-height: 1.6;
+}
+
+#additional .contimg2 .contimg2inner .writing .writcont-bg1{
+  width: 1050px;
+  height: 1000px;
+  background: url(../img/paper.png) no-repeat center top / cover;
+  opacity: 70%;
+  border-radius: 20px;
+  position: absolute;
+  top: 339px;
+  left: 463px;
+  z-index: 99;
+  box-shadow: 0 0 33px rgba(0, 0, 0, 0.25);
+}
+#additional .contimg2 .contimg2inner .writing .writcont-bg2{
+  width: 1020px;
+  height: 1000px;
+  background: url(../img/paper.png) no-repeat center top / cover;
+  opacity: 40%;
+  border-radius: 20px;
+  position: absolute;
+  top: 324px;
+  left: 478px;
+  z-index: 9;
+  box-shadow: 0 0 33px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
 /* query */
 @media(max-width:1400px){
   .mainmid{

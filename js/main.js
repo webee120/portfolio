@@ -18,11 +18,15 @@ $(document).ready(function(){
   $('.eclipse .moon img:last-child').hide();
   $('#profile').hide();
   $('#works').hide();
-  $('#additional').hide();
   $('#works .workcont .twentynine').hide();
   $('#works .workcont .tourzy').hide();
   $('#works .workcont .stori').hide();
   $('#works .workcont .lifemind').hide();
+  $('#additional').hide();
+  $('#additional .contimg2 .contimg2inner .graduate img').hide();
+  $('#additional .contimg2 .contimg2inner .writing').hide();
+  $('#additional .contimg2 .contimg2inner .writing .writcont .cont2').hide();
+  $('#additional .contimg2 .contimg2inner .writing .writcont .cont3').hide();
 
   let lastScrollTop = 1;
   let debounceTimer;
@@ -30,15 +34,19 @@ $(document).ready(function(){
   var paddingValue = ($(window).width() - 750) / 2;
   var paddingValue2 = ($(window).width() - 1330) / 2;
   var paddingValue3 = ($(window).width() - 1000);
+  var paddingValue7 = ($(window).width() - 1600) / 2;
+
   function updatePaddingValues() {
     paddingValue = ($(window).width() - 750) / 2;
     paddingValue2 = ($(window).width() - 1330) / 2;
     paddingValue3 = ($(window).width() - 1000);
+    paddingValue7 = ($(window).width() - 1600) / 2;
   }
   $(window).resize(function() {
     updatePaddingValues();
   });
-  updatePaddingValues();
+
+  // updatePaddingValues();
 
   // svg
   $('.progress');
@@ -351,6 +359,44 @@ $(document).ready(function(){
           }
       }
 
+      if (scrollTop < lastScrollTop 
+        && $('.cover').is(':hidden')
+        && $('#profile').is(':hidden')
+        && $('#works').is(':hidden')
+        && $('#additional').is(':visible')
+      ){
+        
+        if($('#additional .contimg2 .contimg2inner .writing').is(':hidden')){
+          $('#additional .contimg2 .contimg2inner .graduate').hide();
+          $('#additional .contimg2 .contimg2inner .writing').fadeIn();
+          $('#additional .contimg2 .contimg2inner .progressbar .bar1').animate({
+            height : '12px',
+            opacity : '0.5'
+          });
+          $('#additional .contimg2 .contimg2inner .progressbar .bar2').animate({
+            height : '40px',
+            opacity : '1'
+          });
+          $('#additional .contimg2 .contimg2inner .backposition').hide();
+          $('#additional .contimg2 .contimg2inner .backposition').fadeIn();
+        }
+
+        else if($('#additional .contimg2 .contimg2inner .graduate').is(':hidden')){
+          $('#additional .contimg2 .contimg2inner .writing').hide();
+          $('#additional .contimg2 .contimg2inner .graduate').fadeIn()
+          $('#additional .contimg2 .contimg2inner .progressbar .bar1').animate({
+            height : '40px',
+            opacity : '1'
+          });
+          $('#additional .contimg2 .contimg2inner .progressbar .bar2').animate({
+            height : '12px',
+            opacity : '0.5'
+          });
+          $('#additional .contimg2 .contimg2inner .backposition').hide();
+          $('#additional .contimg2 .contimg2inner .backposition').fadeIn();
+        }
+        
+      }
 
       //down
 
@@ -700,6 +746,45 @@ $(document).ready(function(){
             }, 200);
           }
       }
+
+      if (scrollTop > lastScrollTop 
+        && $('.cover').is(':hidden')
+        && $('#profile').is(':hidden')
+        && $('#works').is(':hidden')
+        && $('#additional').is(':visible')
+      ){
+        
+        if($('#additional .contimg2 .contimg2inner .writing').is(':hidden')){
+          $('#additional .contimg2 .contimg2inner .graduate').hide();
+          $('#additional .contimg2 .contimg2inner .writing').fadeIn();
+          $('#additional .contimg2 .contimg2inner .progressbar .bar1').animate({
+            height : '12px',
+            opacity : '0.5'
+          });
+          $('#additional .contimg2 .contimg2inner .progressbar .bar2').animate({
+            height : '40px',
+            opacity : '1'
+          });
+          $('#additional .contimg2 .contimg2inner .backposition').hide();
+          $('#additional .contimg2 .contimg2inner .backposition').fadeIn();
+        }
+
+        else if($('#additional .contimg2 .contimg2inner .graduate').is(':hidden')){
+          $('#additional .contimg2 .contimg2inner .writing').hide();
+          $('#additional .contimg2 .contimg2inner .graduate').fadeIn()
+          $('#additional .contimg2 .contimg2inner .progressbar .bar1').animate({
+            height : '40px',
+            opacity : '1'
+          });
+          $('#additional .contimg2 .contimg2inner .progressbar .bar2').animate({
+            height : '12px',
+            opacity : '0.5'
+          });
+          $('#additional .contimg2 .contimg2inner .backposition').hide();
+          $('#additional .contimg2 .contimg2inner .backposition').fadeIn();
+        }
+        
+      }
     }, 200);
   });
 
@@ -779,9 +864,9 @@ $(document).ready(function(){
       $('#works').delay(600).fadeIn();
     }
 
-
+    //additional
     if ($('.cover').is(':hidden') 
-        && $('.works').hasClass('active')
+        && $('.additional').hasClass('active')
     ){
       $('.orbit img:nth-child(1)').animate({
         opacity:'30%'
@@ -789,8 +874,49 @@ $(document).ready(function(){
       $('.orbit img:nth-child(2)').animate({
         opacity:'10%'
       });
+
+      $('.scroll').fadeOut();
+      $('.index').fadeOut();
+
+      $('.eclipse-wrapper').css({
+        top: 'auto',
+        bottom: '0',
+        transform:'translateY(0)'
+      });
+      $('.eclipse-wrapper').animate({ 
+        height:'800px',
+        paddingLeft: paddingValue7 + 'px',
+        paddingRight: paddingValue7 + 'px',
+      }, 500,);
+      $('.eclipse').animate({ 
+        width:'1600px',
+        height:'800px',
+        borderTopLeftRadius: "800px",
+        borderTopRightRadius: "800px",
+        borderBottomRightRadius: "0",
+        borderBottomLeftRadius: "0"
+      }, 500, );
+      $('#additional .contimg2').animate({ 
+        paddingLeft: paddingValue7 + 'px',
+        paddingRight: paddingValue7 + 'px'
+      }, 500, );
+
+      
+      $('.sun, .sun2').hide();
+      setTimeout(function() {
+        $('.moon img:first-child').attr('src', 'img/moon11.png');
+      }, 600);
+      $('#additional').delay(400).fadeIn();
+      
+
+      $('#additional .contimg2 .contimg2inner .graduate img').delay(1200).fadeIn();
     }
+
+
   });
+
+
+  // direct click
 
   $('.profile').click(function() {
     if ($('.cover').is(':hidden') 
@@ -866,8 +992,55 @@ $(document).ready(function(){
     }
   });
 
-  ////
-  ////
+  $('.additional').click(function() {
+    if ($('.cover').is(':hidden') 
+        && $('.additional').hasClass('active')
+    ){
+      $('.orbit img:nth-child(1)').animate({
+        opacity:'30%'
+      });
+      $('.orbit img:nth-child(2)').animate({
+        opacity:'10%'
+      });
+
+      $('.scroll').fadeOut();
+      $('.index').fadeOut();
+
+      $('.eclipse-wrapper').css({
+        top: 'auto',
+        bottom: '0',
+        transform:'translateY(0)'
+      });
+      $('.eclipse-wrapper').animate({ 
+        height:'800px',
+        paddingLeft: paddingValue7 + 'px',
+        paddingRight: paddingValue7 + 'px',
+      }, 500,);
+      $('.eclipse').animate({ 
+        width:'1600px',
+        height:'800px',
+        borderTopLeftRadius: "800px",
+        borderTopRightRadius: "800px",
+        borderBottomRightRadius: "0",
+        borderBottomLeftRadius: "0"
+      }, 500, );
+      $('#additional .contimg2').animate({ 
+        paddingLeft: paddingValue7 + 'px',
+        paddingRight: paddingValue7 + 'px'
+      }, 500, );
+
+      
+      $('.sun, .sun2').hide();
+      setTimeout(function() {
+        $('.moon img:first-child').attr('src', 'img/moon11.png');
+      }, 600);
+      $('#additional').delay(400).fadeIn();
+      
+
+      $('#additional .contimg2 .contimg2inner .graduate img').delay(1200).fadeIn();
+    }
+  });
+
 
   //back click
 
@@ -965,9 +1138,59 @@ $(document).ready(function(){
     if ($('.cover').is(':hidden') 
       && $('.additional').hasClass('active')
     ){
+      $('.orbit img:nth-child(1)').animate({
+        opacity:'80%'
+      });
+      $('.orbit img:nth-child(2)').animate({
+        opacity:'30%'
+      });
+
+      $('.scroll').fadeIn();
+      $('.index').fadeIn();
+
+      $('#additional').fadeOut();
+      $('#additional .contimg2 .contimg2inner .graduate img').hide();
+      $('#additional .contimg2 .contimg2inner .writing').hide();
+      $('#additional .contimg2 .contimg2inner .graduate').show()
+      $('#additional .contimg2 .contimg2inner .progressbar .bar1').css({
+        height : '40px',
+        opacity : '1'
+      });
+      $('#additional .contimg2 .contimg2inner .progressbar .bar2').css({
+        height : '12px',
+        opacity : '0.5'
+      });
+
+
+      $('.eclipse-wrapper').css({
+        bottom: 'auto',
+        transform:'translateY(-50%)',
+        top: '50%',
+      });
+      $('.eclipse-wrapper').animate({ 
+        height:'750px',
+        paddingLeft: paddingValue + 'px',
+        paddingRight: paddingValue + 'px',
+      }, 500,);
+      $('.eclipse').animate({ 
+        width:'750px',
+        height:'750px',
+        borderRadius: "50%"
+      }, 500, );
       
+      setTimeout(function() {
+        $('.moon img:first-child').attr('src', 'img/moon4.png');
+      }, 0);
     }
   });
+
+
+  //tab click
+  $('#additional .contimg2 .contimg2inner .writing .writlist li').click(function() {
+    $(this).addClass("active").siblings().removeClass("active");
+    $('#additional .contimg2 .contimg2inner .writing .writcont li').eq($(this).index()).fadeIn().siblings().hide();
+  });
+    
 
   //hover 
   
@@ -1024,7 +1247,6 @@ $(document).ready(function(){
     }
   );
 
-
   // 백 이후 패딩값 반영
 
   function debounce(func, wait) {
@@ -1073,6 +1295,22 @@ $(document).ready(function(){
               paddingLeft: paddingValue6 + 'px'
           });
         }
+    }
+
+    if ($('#additional').is(':visible')
+        && $('#profile').is(':hidden')
+        && $('#works').is(':hidden')
+      ){
+      var paddingValue7 = ($(window).width() - 1600) / 2;
+      $('.eclipse-wrapper').css({
+        paddingLeft: paddingValue7 + 'px',
+        paddingRight: paddingValue7 + 'px'
+      });
+      $('#additional .contimg2').css({
+        paddingLeft: paddingValue7 + 'px',
+        paddingRight: paddingValue7 + 'px'
+      });
+
     }
   }
 
