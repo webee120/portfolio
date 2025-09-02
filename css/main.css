@@ -565,6 +565,10 @@ h2.mainright span{
   margin-bottom: 8px;
   font-weight: 400;
 }
+#works .workcont > li:not(:first-child) .project-detail > li > .font-txt{
+  font-family: 'pretendard';
+  font-weight: 600;
+}
 
 #works .workcont .project-detail > li > ul.color-list li{
   display: flex;
@@ -590,6 +594,15 @@ h2.mainright span{
 #works .workcont .samsung h2.project span{
   color: #3F519D; 
 }
+#works .workcont .samsung .project-detail > li > .font-txt{
+  font-family: 'myriadpro';
+  font-weight: 600;
+}
+#works .workcont .samsung .project-detail > li > .font-txt span{
+  font-family: 'thejamsil';
+  font-weight: 800;
+}
+
 #works .workcont .samsung .project-detail > li > ul.color-list li:nth-child(1) > div{
   background-color: #3F519D;
 }
@@ -600,6 +613,8 @@ h2.mainright span{
   background-color: #ffffff;
   border: 1px solid #ddd;
 }
+
+
 
 #works .workcont .twentynine h2.project span{
   color: #FAB951; 
@@ -838,7 +853,6 @@ h2.mainright span{
 
 #additional .contimg2 .contimg2inner .writing .writcont{
   width: 1080px;
-  padding: 140px 80px 40px;
   background: url(../img/paper.png) no-repeat center top / cover;
   border-radius: 20px;
   position: absolute;
@@ -848,7 +862,8 @@ h2.mainright span{
   box-shadow: 0 0 33px rgba(0, 0, 0, 0.25);
 }
 #additional .contimg2 .contimg2inner .writing .writcont li{
- position: relative;
+  padding: 140px 80px 40px;
+  position: relative;
 }
 #additional .contimg2 .contimg2inner .writing .writcont li .blur{
  position: absolute;
@@ -857,12 +872,14 @@ h2.mainright span{
  top: 0;
  left: 0;
  background: url(../img/paper.png) no-repeat center top / cover;
- opacity: 15%;
+ opacity: 18%;
  border-radius: 20px;
 }
 #additional .contimg2 .contimg2inner .writing .writcont li h5{
  font-size: 4.8rem;
  margin-bottom: 102px;
+ font-family: 'kopub';
+ font-weight: 700;
 }
 #additional .contimg2 .contimg2inner .writing .writcont li:first-child h5{
   font-size: 3.6rem;
@@ -870,6 +887,8 @@ h2.mainright span{
 #additional .contimg2 .contimg2inner .writing .writcont li p{
  font-size: 2rem;
  line-height: 1.6;
+ font-family: 'kopub';
+ font-weight: 300;
 }
 
 #additional .contimg2 .contimg2inner .writing .writcont-bg1{
